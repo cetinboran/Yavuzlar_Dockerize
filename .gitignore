@@ -1,3 +1,40 @@
+# Docker Compose
+docker-compose.override.yml
+.dockerignore
+
+# Container logs
+logs/
+
+# Docker image files
+*.tar
+
+# Local stack state
+*.state
+
+# Compose lock file
+docker-compose.lock.json
+
+# Node.js dependencies
+node_modules/
+
+# Python dependencies
+__pycache__/
+*.pyc
+
+# VS Code directory
+.vscode/
 
 mysql-data/
 
+# IDE-specific files
+.idea/
+
+# MacOS-specific files
+.DS_Store
+
+# Windows-specific files
+Thumbs.db
+
+# Editor files
+*~
+*.swp
