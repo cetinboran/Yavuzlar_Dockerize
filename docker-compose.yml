@@ -1,0 +1,31 @@
+version: '3'
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/Dockerfile
+    ports:
+      - "80:80"
+    environment:
+      SITE_URL: http://localhost
+    networks:
+      - impact
+    volumes:
+      - ./app:/var/www/html
+
+  mysql:
+    image: mysql:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: test
+      MYSQL_DATABASE: yavuzlar_obs
+      MYSQL_USER: test
+      MYSQL_PASSWORD: test
+    volumes:
+      - ./mysql-data:/var/lib/mysql
+      - ./yavuzlar_obs.sql:/docker-entrypoint-initdb.d/yavuzlar_obs.sql
+    networks:
+      - impact
+
+networks:
+  impact:
+    external: true
