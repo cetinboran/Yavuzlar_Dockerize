@@ -1,0 +1,30 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body,html{
+    height: 100%;
+}
+
+.bg{
+    height: 100%;
+    
+    position: relative;
+    
+}
+
+.bg::before{
+    content: '';
+
+    position: absolute;
+
+    background-image: url("../images/yavuzlar.png");
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+
+    inset: 0;
+    opacity: 0.5;
+
+    z-index: -5;
+}
