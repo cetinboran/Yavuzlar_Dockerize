@@ -15,6 +15,6 @@
   + username:t[1-3]
   + password:t[1-3]
 + Student
-  + username:s[1-3]
-  + password:s[1-3]
+  + username:s[1-6]
+  + password:s[1-6]
 
