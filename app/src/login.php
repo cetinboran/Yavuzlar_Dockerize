@@ -34,7 +34,7 @@ $DTO = new DTO("", "mysql", ["root", "Boran123.", "yavuzlar_obs"]);
                 </div>
                 <div class="flex items-center gap-4">
                     <div class="text-wheat font-bold">Password: </div>
-                    <div><input class="p-1 pr-2 pl-2 rounded-xl box-border outline-none" type="text" name="password"></div>
+                    <div><input class="p-1 pr-2 pl-2 rounded-xl box-border outline-none" type="password" name="password"></div>
                 </div>
                 <div class="flex items-center gap-4">
                     <div class="text-red-600 font-bold">
