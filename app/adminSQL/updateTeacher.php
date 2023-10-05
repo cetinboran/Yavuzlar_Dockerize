@@ -115,11 +115,11 @@ $DTO = new DTO("", "mysql", ["root", "Boran123.", "yavuzlar_obs"]);
                 </div>
                 <div class="flex w-full justify-between gap-4">
                     <div class="text-wheat font-bold">Password</div>
-                    <div><input type="text" name="password" class="outline-none pr-2 pl-2 rounded-lg p-1"></div>
+                    <div><input type="password" name="password" class="outline-none pr-2 pl-2 rounded-lg p-1"></div>
                 </div>
                 <div class="flex w-full justify-between gap-4">
                     <div class="text-wheat font-bold">Confirm Password</div>
-                    <div><input type="text" name="confirmPassword" class="outline-none pr-2 pl-2 rounded-lg p-1"></div>
+                    <div><input type="password" name="confirmPassword" class="outline-none pr-2 pl-2 rounded-lg p-1"></div>
                 </div>
                 <div class="text-red-600 font-bold">
                     <?= isset($_GET['error']) ? addUsersErrorWrite($_GET['error']) : "" ?>

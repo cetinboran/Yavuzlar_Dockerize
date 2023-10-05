@@ -42,8 +42,7 @@ $DTO = new DTO("", "mysql", ["root", "Boran123.", "yavuzlar_obs"]);
     }
 
     $conn = $DTO->Get();
-    $teachers = $conn->query("SELECT users.id, users.name, users.surname FROM users
-    INNER JOIN lessons ON lessons.teacher_user_id = users.id")
+    $teachers = $conn->query("SELECT users.id, users.name, users.surname FROM users WHERE role = 'teacher'")
     ->fetchAll(PDO::FETCH_ASSOC);
 
     if (isset($_POST['sendedData'])) {

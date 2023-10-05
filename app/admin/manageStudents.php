@@ -63,8 +63,8 @@ if (isset($_GET['delete'])) {
     $id = $_GET['delete'];
 
     $DTO->Delete("classes_students", ["student_id"], [$id]); // Böyle öğrenci bir sınıfta ise onu da siliyoruz.
-    $DTO->Delete("users", ["role", "id"], ["student", $id]);
     $DTO->Delete("exams", ["student_id"],[$id]); // kayıtlı sınavı varsa onu da siliyoruz.
+    $DTO->Delete("users", ["role", "id"], ["student", $id]);
 
     echo "<script>window.location.href ='manageStudents.php'</script>";
     exit();
