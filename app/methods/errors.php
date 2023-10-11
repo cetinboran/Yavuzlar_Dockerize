@@ -51,8 +51,8 @@
                 return "Class name cannot be empty";
             case "2":
                 return "This class name already being used";
-                case "3":
-                    return "Choose Teacher";
+            case "3":
+                return "Choose Teacher";
         }
     }
 
