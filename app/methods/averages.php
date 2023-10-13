@@ -1,5 +1,5 @@
 <?php 
-    $conn = new PDO("mysql:host=mysql-1;port=3306;dbname=yavuzlar_obs", "deneme", "deneme");
+    $conn = new PDO("mysql:host=mysql;port=3306;dbname=yavuzlar_obs", "deneme", "deneme");
 
     // lesson id ve lessons_name leri çekiyorum
     $query = "SELECT distinct lessons.id, lessons.lesson_name
