@@ -27,7 +27,7 @@ class DTO{
             }            
         }
 
-        $this->connMysql = new PDO("mysql:host=yavuzlar_dockerize-mysql-1;port=3306;dbname=yavuzlar_obs", "test", "test");
+        $this->connMysql = new PDO("mysql:host=yavuzlar_dockerize-mysql-1;port=3306;dbname=yavuzlar_obs", "deneme", "deneme");
         $this->query = new Query();
     }
 

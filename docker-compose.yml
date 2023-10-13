@@ -16,10 +16,10 @@ services:
   mysql:
     image: mysql:latest
     environment:
-      MYSQL_ROOT_PASSWORD: test
+      MYSQL_ROOT_PASSWORD: deneme
       MYSQL_DATABASE: yavuzlar_obs
-      MYSQL_USER: test
-      MYSQL_PASSWORD: test
+      MYSQL_USER: deneme
+      MYSQL_PASSWORD: deneme
     volumes:
       - ./mysql-data:/var/lib/mysql
       - ./yavuzlar_obs.sql:/docker-entrypoint-initdb.d/yavuzlar_obs.sql
