@@ -28,4 +28,4 @@ services:
 
 networks:
   impact:
-    external: true
+    driver: bridge

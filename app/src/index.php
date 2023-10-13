@@ -3,7 +3,7 @@ session_start();
 require_once("../dto/dto.php");
 require_once("../methods/methods.php");
 
-$DTO = new DTO("", "mysql", ["root", "Boran123.", "yavuzlar_obs"]);
+$DTO = new DTO("", "mysql", ["deneme", "deneme.", "yavuzlar_obs"]);
 
 if(isset($_GET['logout'])){
     setcookie("PHPSESSID", "", time() + (86400 * 30), "/");

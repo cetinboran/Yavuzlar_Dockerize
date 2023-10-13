@@ -4,7 +4,7 @@ require_once("../methods/methods.php");
 require_once("../methods/errors.php");
 require_once("../dto/dto.php");
 
-$DTO = new DTO("", "mysql", ["root", "Boran123.", "yavuzlar_obs"]);
+$DTO = new DTO("", "mysql", ["deneme", "deneme.", "yavuzlar_obs"]);
 ?>
 <!DOCTYPE html>
 <html lang="en">
