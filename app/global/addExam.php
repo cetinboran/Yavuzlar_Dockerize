@@ -90,6 +90,7 @@ $DTO = new DTO("", "mysql", ["deneme", "deneme.", "yavuzlar_obs"]);
             return;
         }
 
+        // Valid check
         if($_SESSION['role'] == "teacher") {
             $c = $_SESSION["class"];
             if ($c != -1){
