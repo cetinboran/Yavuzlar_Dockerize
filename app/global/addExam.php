@@ -89,6 +89,25 @@ $DTO = new DTO("", "mysql", ["deneme", "deneme.", "yavuzlar_obs"]);
             ob_end_flush();
             return;
         }
+
+        if($_SESSION['role'] == "teacher") {
+            $c = $_SESSION["class"];
+            if ($c != -1){
+                $check = "SELECT * FROM classes_students WHERE class_id = :classId AND student_id = :studentId";
+                $stmt = $conn->prepare($check);
+                $stmt->bindParam(":classId", $c);
+                $stmt->bindParam(":studentId", $student);
+                $stmt->execute();
+
+                $result = $stmt->fetchAll(PDO::FETCH_ASSOC);
+
+                if(count($result) == 0){
+                    header("Location: addExam.php?sendedData=$c");
+                    ob_end_flush();
+                    return;
+                }
+            } 
+        }
         
 
         $DTO->Insert("exams", ["student_id", "lesson_id", "class_id", "exam_score" , "exam_date"], [$student, $lesson, $classId, $value, $examDate]);

@@ -81,6 +81,11 @@ function CalculateLessonAvarage($pdo, $id, $lessonId)
 
 function Pages($arr, $currentPage)
 {
+    $currentPage = intval($currentPage);
+    if($currentPage == 0){
+        return [0,0,0];
+    }
+    
     $maxList = 8;
     $length = count($arr);
 
